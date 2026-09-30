@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+       <h1><span>GAME</span> SHELF</h1>
+       <div class="links-nav">
+          <a href="#jogos">Jogos</a>
+          <a href="#favoritos">Favoritos</a>
+          <a href="#jogando">Jogando</a>
+       </div>
+       
+    </nav>
+
+
+   <h2>Bem-vindo(a)!</h2>
+
+        <div class="banner">
+        <div class="slider"></div>
+
+        <button class="btn anterior"><</button>
+        <button class="btn proximo">></button>
+    </div>
+
+
+
+   <section id="jogos">
+        <h2>Jogos</h2>
+        <div class="pesquisa">
+          <input type="text" id="ipt-pesquisa" placeholder="Digite o nome do jogo">
+          <button id="btn-pesquisar">Pesquisar</button>
+        </div>
+        <div class="games-container">
+            <button class="games-anterior"><</button>
+
+            <div class="games-window">
+             <div id="games"></div>
+            </div>
+            <button class="games-proximo">></button>
+
+
+        </div>
+   </section>
+
+   <section id="favoritos">
+        <h2>Favoritos</h2>
+
+        <div id="lista-favoritos"></div>
+   </section>
+
+   <section id="jogando">
+        <h2>Jogando</h2>
+
+        <div id="lista-jogando"></div>
+   </section>
+
+  
+
+   <div id="confirmacao-jogando" class="confirmacao">
+     <p>Adicionar este jogo em Jogando?</p>
+
+     <button id="confirmar-jogando">Sim</button>
+     <button id="cancelar-jogando">Não</button>
+   </div>
+
+    <button id="sair">Sair</button>
+    
+    <script src="home.js"></script>
+</body>
+
+</html>

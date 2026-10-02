@@ -8,6 +8,10 @@ const cancelarJogando = document.querySelector("#cancelar-jogando")
 const iptPesquisa = document.querySelector("#ipt-pesquisa")
 const btnPesquisar = document.querySelector("#btn-pesquisar")
 
+const boasVindas = document.querySelector("#boas-vindas")
+const cadastro = JSON.parse(localStorage.getItem("cadastro"))
+boasVindas.innerText = `Bem-vindo(a), ${cadastro.nome}!`
+
 let idJogoSelecionado
 
 btnPesquisar.addEventListener("click", () => {
@@ -37,6 +41,11 @@ btnPesquisar.addEventListener("click", () => {
 
                 `
             })
+
+            document.querySelector("#jogos").scrollIntoView({
+                behavior: "smooth"
+            })
+
              const botoesFavoritarPesquisa = document.querySelectorAll(".favoritar")
 
                 botoesFavoritarPesquisa.forEach(botao => {
@@ -254,6 +263,7 @@ fetch(`https://api.rawg.io/api/games?key=${apiKey}`)
                 if(!jogando.includes(idJogoSelecionado)){
                     jogando.push(idJogoSelecionado)
                     localStorage.setItem("jogando", JSON.stringify(jogando))
+                    
 
                     confirmacaoJogando.style.display = "none"
                 }

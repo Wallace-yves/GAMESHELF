@@ -154,7 +154,8 @@ button:hover {
     justify-content: end;
     align-items: center;
     gap: 10px;
-    margin: 20px auto 30px;
+    grid-column: 3;
+    margin: 0;
 }
 
 #ipt-pesquisa {
@@ -274,7 +275,7 @@ h1 {
 }
 
 h2 {
-    text-align: start;
+    text-align: center;
     color: white;
     font-size: 30px;
     margin-left: 5%;

@@ -10,7 +10,7 @@ if(formLogin){
         const dataForm = new FormData(formLogin)
         const dataLogin ={
             email: dataForm.get("email"),
-            senha: dataForm.get("senha")
+            senha: btoa(dataForm.get("senha"))
         }
         const dataStorage = localStorage.getItem("cadastro")
 
@@ -58,7 +58,7 @@ if(formCadastro){
         const dataCadastro ={
             nome: dataForm.get("nome"),
             email: dataForm.get("email"),
-            senha: dataForm.get("senha"),
+            senha: btoa(dataForm.get("senha")),
             cep: dataForm.get("cep"),
             rua: dataForm.get("rua"),
             bairro: dataForm.get("bairro"),
